@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Directions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Me2-Xl-YiX">
+                                <rect key="frame" x="0.0" y="70" width="375" height="527"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZx-tS-Swz">
+                                <rect key="frame" x="25" y="10" width="250" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkc-IO-DC3">
+                                <rect key="frame" x="277" y="12" width="98" height="30"/>
+                                <state key="normal" title="Get Directions"/>
+                                <connections>
+                                    <action selector="getDirectionsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o90-qL-9dp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Me2-Xl-YiX" secondAttribute="bottom" constant="70" id="5U0-Um-GUl"/>
+                            <constraint firstItem="Me2-Xl-YiX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5kJ-3e-Bth"/>
+                            <constraint firstItem="Me2-Xl-YiX" firstAttribute="top" secondItem="hkc-IO-DC3" secondAttribute="bottom" constant="28" id="66D-q7-9vz"/>
+                            <constraint firstItem="KZx-tS-Swz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Q8F-Vj-Dn0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KZx-tS-Swz" secondAttribute="trailing" constant="100" id="Qok-nP-P3R"/>
+                            <constraint firstItem="Me2-Xl-YiX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Ski-jZ-3Uz"/>
+                            <constraint firstItem="hkc-IO-DC3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xqd-oW-vLB"/>
+                            <constraint firstItem="hkc-IO-DC3" firstAttribute="leading" secondItem="KZx-tS-Swz" secondAttribute="trailing" constant="2" id="gxs-1g-3mN"/>
+                            <constraint firstItem="KZx-tS-Swz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="jPX-hs-dbo"/>
+                            <constraint firstItem="hkc-IO-DC3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="lSy-gE-76c"/>
+                            <constraint firstItem="Me2-Xl-YiX" firstAttribute="top" secondItem="KZx-tS-Swz" secondAttribute="bottom" constant="26" id="osR-49-t1V"/>
+                            <constraint firstItem="Me2-Xl-YiX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uPY-hX-GaW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="getDirectionsButton" destination="hkc-IO-DC3" id="6NK-9E-kwx"/>
+                        <outlet property="map" destination="Me2-Xl-YiX" id="kuX-ED-Lb5"/>
+                        <outlet property="textFieldAddress" destination="KZx-tS-Swz" id="Vwf-Al-o4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
